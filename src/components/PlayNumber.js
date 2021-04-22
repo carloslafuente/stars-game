@@ -1,10 +1,10 @@
 import colors from '../theme/colors';
 
-const PlayNumber = ({ number, status }) => (
+const PlayNumber = ({ number, status, onClick }) => (
   <button
     style={{ backgroundColor: colors[status] }}
     className='number'
-    onClick={() => console.log('Num', number, status)}
+    onClick={() => onClick(number, status)}
   >
     {number}
   </button>
